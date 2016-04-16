@@ -94,7 +94,7 @@ body{
 	box-shadow: 0 -1px 5px #444;
 	background-color: rgba(180, 180, 180, 0.6);
 }
-.navBar .nav-footer div{
+.navBar .nav-footer a{
 	float: left;
 	width: 50px;
 	height: 50px;
