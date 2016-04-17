@@ -66,6 +66,37 @@ boxInitFunction = function(){
 	    	}
 	    },
 
+	    chkWindowWidth: function(width){
+	    	if(width <= 800){
+	    		dom.navBar.className = 'navBar open';
+	    		mt.showBackdrop();
+	    		dom.isNavOpen = true;
+	    	}
+	    	if(width > 800){
+	    		dom.navBar.className = 'navBar';
+	    		dom.backDrop.style.display = 'none';
+	    		dom.isNavOpen = false;
+	    	}
+	    },
+
+	    showHideNav: function(){
+	    	if(window.innerWidth < 800){
+	    		if(dom.isNavOpen){
+	    			dom.navBar.className = 'navBar';
+	    			dom.backDrop.style.display = 'none';
+	    		}else{
+	    			dom.navBar.className = 'navBar open';
+	    			mt.showBackdrop();
+	    		}
+	    		dom.isNavOpen = !dom.isNavOpen;
+	    	}
+	    },
+	    showBackdrop: function(){
+	    	window.setTimeout(function(){
+	    		dom.backDrop.style.display = 'block';
+	    	}, 500);
+	    }
+
 	    /*animateSpanToHeader: function(span){
 	    	span.className = 'movingSpan';
 	    	var lPos = span.offsetLeft;
@@ -94,8 +125,13 @@ boxInitFunction = function(){
 	  
 	  },
 	  events: function(){
+	  	window.addEventListener('resize', function(e){
+	  		mt.chkWindowWidth(e.target.innerWidth);
+	  	});
+	  	dom.navPic.addEventListener('click', mt.showHideNav);
 	  },
 	  initializer: function(){
+	  mt.chkWindowWidth(window.innerWidth);
 	  mt.renderBox();
 	  dom.navCont.style.height = (dom.xBox * dom.blkSize) + 'px';
 	  dom.navCont.style.width = (dom.yBox * dom.blkSize) + 'px';
@@ -114,8 +150,12 @@ boxInitFunction = function(){
 		  switchingDelay: 400,
 		  currentNav: null,
 		  currentNavSpan: null,
+		  isNavOpen: true,
 		  cont: document.getElementsByClassName('container')[0],
-		  navCont: document.getElementById('navContent')
+		  navCont: document.getElementById('navContent'),
+		  navBar: document.getElementById('navBar'),
+		  navPic: document.getElementsByClassName('nav-pic')[0],
+		  backDrop: document.getElementsByClassName('back-drop')[0]
 	  }
 	};
 
