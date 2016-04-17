@@ -3,6 +3,17 @@ body{
 	background-color: #E1F5FE;
   /*background-image: url("../images/galaxy.png");*/
 }
+.back-drop{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 40;
+	transition: visibility 0.6s;
+	display: none;
+}
 .box{
   width: 50px;
   height: 50px;
@@ -30,7 +41,7 @@ body{
 }
 .navBar .nav-head{
 	width: 100%;
-	background-image: url('http://img2.goodfon.su/wallpaper/big/3/b6/android-5-0-lollipop-material-5355.jpg');
+	background-image: url('../images/navImg.jpg');/*url('http://img2.goodfon.su/wallpaper/big/3/b6/android-5-0-lollipop-material-5355.jpg');*/
 	background-size: cover;
 	padding: 20px 0 10px 0;
 	border-bottom: 1px solid #999;
@@ -138,4 +149,40 @@ body{
 .showNavCont{
 	opacity: 1 !important;
 	transition: linear 0.7s;
+}
+
+
+/******--Media Query--******/
+
+@media only screen and (max-width: 800px){
+	.navBar{
+		width: 400px;
+		position: absolute;
+		left: -400px;
+		transition: linear all 0.5s;
+		z-index: 0;
+	}
+	.navBar.open{
+		left: 0;
+		z-index: 50;
+	}
+	.navBar .nav-head{
+		padding-top: 100px;
+	}
+	.navBar .nav-head .nav-pic{
+		position: fixed;
+		left: 50px;
+		top: 20px;
+		z-index: 51;
+		transition: linear 0.5s;
+	}
+	.navBar.open .nav-pic{
+		left: 200px;
+	}
+	.navBar .nav-head .nav-pic:active{
+		box-shadow: inset -1px -1px 5px #222;
+	}
+	.navBar .nav-footer{
+		width: 100%;
+	}
 }
