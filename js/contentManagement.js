@@ -43,10 +43,22 @@ window.onload = function(){
 contentData = {
 	"header": "Welcome Text",
 	"nav": [
-			{"title": "Tile 1", "id": 1},
-			{"title": "Tile 2", "id": 2},
-			{"title": "#3 Tile", "id": 3},
-			{"title": "4th one", "id": 4}
+			{"title": "Tile 1",
+			"id": 1,
+			"content": ""
+			},
+			{"title": "Tile 2",
+			"id": 2,
+			"content": ""
+			},
+			{"title": "#3 Tile",
+			"id": 3,
+			"content": ""
+			},
+			{"title": "4th one",
+			"id": 4,
+			"content": ""
+			}
 		]
 	/*"nav": [
 			{"title": "About", "id": 1},
