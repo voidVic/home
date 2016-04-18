@@ -41,7 +41,7 @@ body{
 }
 .navBar .nav-head{
 	width: 100%;
-	background-image: url('../images/navImg.jpg');/*url('http://img2.goodfon.su/wallpaper/big/3/b6/android-5-0-lollipop-material-5355.jpg');*/
+	background-image: /*url('../images/navImg.jpg');*/url('http://img2.goodfon.su/wallpaper/big/3/b6/android-5-0-lollipop-material-5355.jpg');
 	background-size: cover;
 	padding: 20px 0 10px 0;
 	border-bottom: 1px solid #999;
