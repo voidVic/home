@@ -1,48 +1,49 @@
+<!DOCTYPE html>
+
 <html>
-	<head>
-		<title>
-		</title>
+<head>
 
-		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>VoidVic</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Angular Material style sheet -->
+  <link rel="stylesheet"  type="text/css" href="css/angular-material.css">
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/main.css">
 
-	</head>
-	<body>
+</head>
+<body ng-app="webProfile">
 
+<div>
+	<div class="col-md-3 nav">
+		<div ng-include="'partials/nav.html'"></div>
+	</div>
+	<div class="col-md-9 col-sm-12 col-xs-12 pull-right content">
+		<div ng-view></div>
+	</div>
+</div>
 
-		<div class="wrapper">
-			<!--
-			<input type="button" id="switch1" value="Serial">
-			<input type="button" id="switch2" value="De-Serial">
-			-->
+<!-- Dependencies -->
+<script src="js/angular.min.js"></script>
+  <!-- <script src="js/angular.animate.min.js"> -->
+<script src="js/angularRoute.min.js"></script>
+<script src="js/ui-bootstrap-tpls-1.3.3.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-message.js"></script>
 
-			<div class="navBar" id="navBar">
-				<div class="nav-head">
-					<div class="nav-pic"></div>
-					<div class="nav-title"> Some text</div>
-				</div>
-				<ul id="navUl">
-				</ul>
-				<div class="nav-footer">
-					<a class="contact"></a>
-					<a class="gplus"  target="_blank" href="https://plus.google.com/+AnkitSharma1"></a>
-					<a class="fb"  target="_blank" href="https://www.facebook.com/VoidVic"></a>
-					<a class="gmail"  target="_blank" href="mailto:vicnwz@gmail.com?Subject=Hello%20Ankit"></a>
-					<a class="linkedin"  target="_blank" href="https://www.linkedin.com/in/ankit-sharma-330b4264"></a>
-				</div>
-			</div>
-			<div class="container">
-				<div id="navContent">
-					<div id="contHeader"></div>
-					<div id="contMatter"></div>
-				</div>
-			</div>
+  <!-- Angular Material Library -->
+  <script src="js/angular-material.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA1AzS7QMgi4L9D7I_IshMJqIobgawIk3A"></script>
 
-			
-		</div>
-		<div class="back-drop"></div>
+<!-- Our Website Javascripts -->
+<script src="app/appModule.js"></script>
 
-		<script type="text/javascript" src="js/script.js" ></script>
-		<script type="text/javascript" src="js/contentManagement.js" ></script>
-	</body>
+<!-- Services -->
+<script type="text/javascript" src="app/services/profileService.js"></script>
+
+<!-- Controllers -->
+<script type="text/javascript" src="app/controllers/homeController.js"></script>
+<script type="text/javascript" src="app/controllers/navController.js"></script>
+<script type="text/javascript" src="app/controllers/externalAppController.js"></script>
+
+</body>
 </html>
