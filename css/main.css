@@ -1,0 +1,345 @@
+/*
+* Global Color Codes
+*/
+:root{
+	--midnight: #2c3e50;
+	--darkPrimary : #1976D2;
+	--primaryColor: #2196F3;
+	--lightPrimary: #B2DFDB;
+	--accentColor: #FF5252;
+	--primaryText: #212121;
+	--secondaryText: #727272;
+	--colorLight: #ecf0f1;
+}
+.bgDark{
+	background-color: var(--darkPrimary);
+}
+.bgPrimary{
+	background-color: var(--primaryColor);
+}
+.accent{
+	background-color: var(--accentColor);
+}
+.fc-w{
+	color: #FFF;
+}
+body{
+	background-color: var(--midnight);
+	color: var(--primaryText);
+}
+
+/******Navigation******/
+
+.nav{
+	min-height:100%;
+	position: absolute;
+	padding:0;
+	box-shadow: 2px 0 5px #444;
+	background-color: var(--colorLight);
+	color: var(--midnight);
+}
+
+.mobile-nav{
+	position: fixed;
+  top: 0;
+  width: 300px;
+	transition: 0.3s all ease-in;
+}
+
+.mob-nav-open{
+	left: 0;
+}
+
+.mob-nav-close{
+	left: -300px;
+}
+
+.nav .head-profile{
+	box-shadow: 0 1px 5px #444;
+	background-color: var(--colorLight);
+	padding-top: 20px;
+	background-image: url('http://i2.wp.com/thezinx.com/wp-content/uploads/where-tahrs-live.jpg');
+	background-size: cover;
+	color: var(--colorLight);
+}
+.nav .circle-nav-img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	box-shadow: 1px 1px 5px #444;
+	margin: 0 auto;
+	background-image: url('https://pbs.twimg.com/profile_images/700534020065505280/Jj9L3AF8.jpg');
+	background-size: cover;
+}
+.nav .nav-title{
+	padding: 10px 0 5px 0;
+	text-align: center;
+	font-size: 18px;
+}
+.nav .nav-link{
+	padding: 10px 10px 10px 20px;
+	box-shadow: 0px 1px 3px #2c3e50;/* #midnight */
+	cursor: pointer;
+	font-size: 15px;
+	transition: all 0.2s linear;
+}
+.nav .nav-link.inverted{
+	color: var(--colorLight);
+	background-color: var(--midnight);
+	transition: 0.2s all linear;
+}
+
+
+/**********Box Style***********/
+
+
+.box{
+	width: 50px;
+	height: 50px;
+	background-color: var(--colorLight);
+	position: absolute;
+	transition: linear 0.4s;
+	opacity: 0.7;
+	box-shadow: 2px 2px 5px #444;
+	display: block;
+}
+.merged-box{
+	width: 11.5%;
+	height: 16%;
+	opacity: 0;
+}
+
+.hide-box{
+
+}
+
+/***********Tense Classes***********/
+.past, .current, .future{
+	width: 100%;
+	height: 100%;
+	background-color: var(--colorLight);
+	display: none;
+	overflow-y: auto;
+}
+.current{
+	display: block;
+}
+/*.past{
+	transform: translateX(-400px) rotateY(-90deg);
+	animation: past .5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.current{
+	display:block;
+}
+.future{
+	transform: translateX(400px) rotateY(90deg);
+	animation: future .5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes past {
+    from { transform: translateX(0px) rotateY(0deg);}
+    to {transform: translateX(-400px) rotateY(-90deg); display:none;}
+}
+
+@keyframes future {
+    from {transform: translateX(0px) rotateY(0deg);}
+    to {transform: translateX(400px) rotateY(90deg); display:none;}
+}*/
+
+/*Material class*/
+.input-m-class{
+	padding-top: 15px;
+	font-size: 16px;
+}
+.input-m-class label{
+	position: relative;
+	font-size: 1em;
+	top: 20px;
+	color: var(--secondaryText);
+	font-weight: 100;
+	margin: 0;
+	transition: 0.2s all linear;
+}
+.input-m-class label.active{
+	font-size: 0.6em;
+	top: 0;
+	color: var(--midnight);
+}
+
+.input-m-class input{
+	position: relative;
+	bottom: 0;
+	left: 0;
+	font-size: 1em;
+	border:0;
+	background-color: transparent;
+	width: 100%;
+	border-bottom: 1px solid var(--secondaryText);
+}
+.input-m-class input[type=textarea]{
+}
+.input-m-class input:focus{
+	outline: none;
+	border-bottom: 2px solid var(--primaryColor);
+}
+
+.button-m{
+	background-color: var(--midnight);
+	border: none;
+	padding: 10px 10px;
+	width: 100%;
+	margin: 10px;
+	text-align: center;
+	font-size: 1.2em;
+	color: var(--colorLight);
+	box-shadow: 0 1px 5px #999;
+}
+.button-m:hover{
+	box-shadow: 0 2px 8px #999;
+}
+
+/***********Home-content***********/
+.home-content-wrap{
+	height: 500px;
+	margin-top: 7%;
+}
+.sub-heading{
+	position: relative;
+	color: var(--colorLight);
+	font-size: 35px;
+	padding: 10px 20px;
+	font-weight: bold;
+	background-color: var(--lightPrimary);
+	width: 80%;
+	margin-left: 10%;
+	display: block;
+	box-shadow: 1px 1px 5px #777;
+	z-index: 10;
+}
+.sub-heading:empty{
+	display: none;
+}
+
+.content{
+	height: 100vh;
+}
+
+.home-content{
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;
+	background-color: var(--colorLight);
+	z-index: 5;
+	opacity: 1;
+	overflow-y: auto;
+}
+.hide-scroll{
+	overflow: hidden;
+}
+.opa-1{
+	opacity: 1;
+	transition: 0.2s all linear;
+}
+
+.about, .work{
+	padding: 30px 20px 0 20px;
+	font-size: 18px;
+	position: relative;
+}
+
+.about-img{
+	margin: 0 -20px;
+	width: 100%;
+	position:absolute;
+	bottom: 0;
+	cursor: none;
+}
+.about-img img{
+	width: 100%;
+}
+#hoverDpDiv{
+	width: 15%;
+	height: 40%;
+	border-radius: 50px;
+	position: absolute;
+	background-image: url('../images/apple-n1.jpg');
+	background-color: transparent;
+	background-size: 666%;
+	display: none;
+	/*box-shadow: 0 0 5px solid #444;*/
+}
+
+.skills{
+
+}
+
+.skill{
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+	padding-top: 5px;
+	box-shadow: 0 1px 3px #ccc;
+}
+.skill .name{
+	text-align: right;
+}
+
+.contact{
+	font-weight: normal;
+}
+
+.contact-top, .contact-mid, .contact-bottom{
+	padding: 10px 20px;
+}
+.contact-mid{
+	height: 200px;
+	width: 100%;
+	margin: 0;
+}
+.social-icons{
+	display: table;
+	width: 100%;
+}
+.social-icons a{
+	margin: auto;
+}
+.linked-in, .fb, .google-plus, .instagram{
+	display: table-cell;
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.linked-in{
+	background-image: url('../images/linkedin.png');
+}
+.fb{
+	background-image: url('../images/facebook.png');
+}
+.google-plus{
+	background-image: url('../images/google+.png');
+}
+.instagram{
+	background-image: url('../images/instagram.png');
+}
+
+.linked-in:hover, .fb:hover, .google-plus:hover, .instagram:hover{
+	transition: 0.2s all linear;
+	transform: translateY(-5px);
+	width: 50px;
+	height: 50px;
+}
+
+/*override classes*/
+
+.modal-content{
+	height: 90vh;
+}
+embed{
+	width: 100%;
+	height: 100%;
+}
