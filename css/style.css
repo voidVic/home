@@ -1,0 +1,188 @@
+
+body{
+	background-color: #E1F5FE;
+  /*background-image: url("../images/galaxy.png");*/
+}
+.back-drop{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 40;
+	transition: visibility 0.6s;
+	display: none;
+}
+.box{
+  width: 50px;
+  height: 50px;
+  background-color: #00897B;
+  position: absolute;
+  transition: linear 0.4s;
+  opacity: 0.7;
+}
+.merged-box{
+	width: 100px;
+	height: 100px;
+	opacity: 1;
+}
+
+.wrapper{
+	width: 100%;
+	clear: both;
+}
+.navBar{
+	width: 23%;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 2px 0 5px #444;
+	float: left;
+}
+.navBar .nav-head{
+	width: 100%;
+	background-image: /*url('../images/navImg.jpg');*/url('http://img2.goodfon.su/wallpaper/big/3/b6/android-5-0-lollipop-material-5355.jpg');
+	background-size: cover;
+	padding: 20px 0 10px 0;
+	border-bottom: 1px solid #999;
+	box-shadow: 0 1px 5px #444;
+}
+.navBar .nav-head .nav-pic{
+	background-image: url('https://lh3.googleusercontent.com/pRjTmf7X7jerQ3h8ihmYFmsRUy2wJ8yG5WMlfJrPchG0Q7SbAoiQaPlZWbKadoCRIQ__=w1366-h768-rw-no');
+	background-size: cover;
+	position: relative;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	border: 1px solid #999;
+	box-shadow: 2px 2px 5px #222;
+}
+.navBar .nav-head .nav-title{
+	text-align: center;
+	margin-top: 50px;
+	color: #fff;
+}
+.navBar ul{
+	width: 100%;
+	margin-top: 10px;
+	color: #00897B;
+}
+.navBar ul li{
+	padding: 10px 0;
+	width: 100%;
+	text-indent: 20px;
+	border-bottom: 1px solid #ccc;
+  	transition: linear 0.2s;
+}
+.navBar ul li:hover{
+	width: 100%;
+	color: #FFF;
+	background-color: #00897B;
+	border-color: #00897B;
+	box-shadow: 0 2px 8px #444;
+}
+
+.navBar ul .invertedNav{
+	color: #137AD2;
+	background-color: #fff;
+}
+.navBar ul li .movingSpan{
+	position: absolute;
+  	z-index: 20;
+}
+.navBar ul li .biggerFont{
+	font-size: 35px;
+	transition: linear 0.2s;
+}
+
+.navBar .nav-footer{
+	position: absolute;
+	width: 23%;
+	bottom: 0;
+	padding: 5px 0 10px 0;
+	box-shadow: 0 -1px 5px #444;
+	background-color: rgba(180, 180, 180, 0.6);
+}
+.navBar .nav-footer a{
+	float: left;
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.navBar .nav-footer .contact{
+	left: 0;
+	background-image: url('http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Contacts-icon.png');
+}
+.navBar .nav-footer .gplus{
+	left: 25%;
+	background-image: url('http://www.androidpolice.com/wp-content/uploads/2014/10/nexus2cee_542ecc354383c-150x150_thumb.png');
+}
+.navBar .nav-footer .fb{
+	left: 50%;
+	background-image: url('http://pic.youmobile.org/imgcdn/fb_material_45.png');
+}
+.navBar .nav-footer .gmail{
+	left: 75%;
+	background-image: url('http://www.androidpolice.com/wp-content/uploads/2014/10/nexus2cee_unnamed-63.png');
+}
+.navBar .nav-footer .linkedin{
+	background-image: url('https://opensource.org/files/linkedin.png');
+}
+.container{
+	width: 76%;
+	height: 100%;
+	background-color: transparent;
+	float: right;
+}
+
+#navContent{
+	opacity: 0;
+	/*background: linear-gradient(120deg, #0fa9a8,#bb58df);*/
+	box-shadow: 3px 3px 8px #444;
+	position: absolute;
+	z-index:21;
+}
+.showNavCont{
+	opacity: 1 !important;
+	transition: linear 0.7s;
+}
+
+
+/******--Media Query--******/
+
+@media only screen and (max-width: 800px){
+	.navBar{
+		width: 400px;
+		position: absolute;
+		left: -400px;
+		transition: linear all 0.5s;
+		z-index: 0;
+	}
+	.navBar.open{
+		left: 0;
+		z-index: 50;
+	}
+	.navBar .nav-head{
+		padding-top: 100px;
+	}
+	.navBar .nav-head .nav-pic{
+		position: fixed;
+		left: 50px;
+		top: 20px;
+		z-index: 51;
+		transition: linear 0.5s;
+	}
+	.navBar.open .nav-pic{
+		left: 200px;
+	}
+	.navBar .nav-head .nav-pic:active{
+		box-shadow: inset -1px -1px 5px #222;
+	}
+	.navBar .nav-footer{
+		width: 100%;
+	}
+}
