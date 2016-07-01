@@ -1,0 +1,89 @@
+<div class="home-content-wrap">
+
+	<!-- home-container has boxes -->
+	<div class="home-container">
+
+	</div>
+
+	<div class="sub-heading"  ng-class="(homeCtrl.showContent != null)?'opa-1': ''" ng-bind="homeCtrl.heading"></div>
+
+	<div class="home-content" ng-class="(homeCtrl.showContent != null)?homeCtrl.hideScroll?'hide-scroll show':'show': 'hide'">
+
+		<div class="about hide-scroll {{homeCtrl.navLinks[0].tense}}">
+			<p>Hi, I am Ankit, a 25 year old full stack MEAN developer and an open source lover. I love to develop apps right from designing its UI to it's architecture, database to the HTML and everything in between.</p>
+			<p>I love to make games and play games.</p>
+			<p>I work on Augmented and Virtual relity stuff and specialize in making Web-Apps.</p>
+			<!-- <div class="about-img" ng-mousemove="homeCtrl.showHoverDP($event)"> -->
+			<div class="about-img" ng-mouseenter="homeCtrl.revealMe(true)" ng-mouseleave="homeCtrl.revealMe(false)" ng-mousemove="homeCtrl.revealMe(true, $event)">
+				<img src="images/apple-n.jpg">
+				<div id="hoverDpDiv"></div>
+			</div>
+		</div>
+
+
+	<!-- Skill Section -->
+		<div class="skills {{homeCtrl.navLinks[1].tense}}">
+			<div class="content-wrap">
+				<div class="skill clearfix" ng-repeat="skill in homeCtrl.skills">
+					<div class="col-md-4 name" ng-bind="skill.name"></div>
+					<div class="col-md-8">
+						<uib-progressbar class="progress-striped active" value="skill.per" type="{{skill.type}}">{{skill.per}} %</uib-progressbar>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Work Section -->
+		<div class="work {{homeCtrl.navLinks[2].tense}}">
+			<p>
+				Being a full stack MEAN Developer I extensively work on AngularJs.
+				I have worked on few applications build entirely in AngularJs and NodeJs and backed by MongoDB.
+			</p>
+			<p>
+				I've developed Android based Augmented/Virtual reality applications using Unity 3D a Physics engine.
+			</p>
+			<p>
+				In my free time I generally work on small web based Games (Canvas and DIV based).
+			</p>
+			<p>
+				You can always check out few stuff which I've created, available on my Git account.
+				<ul>
+					<li><a href="http://voidvic.github.io/2048" target="_blank">Web Based 2048 Game.</a></li>
+					<li><a href="http://voidvic.github.io/spaceShoot" target="_blank">Space Shooting Game.</a></li>
+					<li><a href="http://voidvic.github.io/expense" target="_blank">Expense Divider App.</a></li>
+				</ul>
+			</p>
+		</div>
+
+		<!-- Contact Section -->
+		<div class="contact {{homeCtrl.navLinks[3].tense}}">
+			<div class="contact-bottom">
+				<ul class="social-icons">
+					<li ng-repeat="social in homeCtrl.socials" class="{{social.class}}"><a href="{{social.link}}" target="_blank"></a></li>
+				</ul>
+			</div>
+			<div class="contact-top">
+				<form class="" action="" method="post">
+					<!-- <div class="input-m">
+						<label for="name" ng-class="{'active': homeCtrl.contact.active.name || homeCtrl.contact.name!='' }">Name</label>
+						<input type="text" name="name" value="" ng-model="homeCtrl.contact.name"
+						ng-focus="homeCtrl.contact.active.name = true" ng-blur="homeCtrl.contact.active.name = false">
+					</div> -->
+
+					<input-m m-type="text" m-label="Name" m-model="homeCtrl.contact.name"></input-m>
+					<input-m m-type="text" m-label="Email Id" m-model="homeCtrl.contact.mail"></input-m>
+					<input-m m-type="textarea" m-row="3" m-label="Message" m-model="homeCtrl.contact.message"></input-m>
+					<input type="button" class="button-m" name="" ng-click="homeCtrl.test()" value="Send">
+				</form>
+			</div>
+			<div class="contact-mid" id="contactMap"></div>
+		</div>
+
+		<!-- Content 4 Section -->
+		<!-- <div class="{{homeCtrl.navLinks[4].tense}}">
+		</div> -->
+	</div>
+
+	<!-- <div class="color-toggle" ng-bind="homeCtrl.switchTo" ng-click="homeCtrl.switchColor()"></div> -->
+
+</div>
